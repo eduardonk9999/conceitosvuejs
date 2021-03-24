@@ -4,10 +4,10 @@
 
     <ul>
       <li 
-        v-for="task in tasks"
+        v-for="(task, index) in tasks"
         :key="`${task}-${index}`"
       >
-        {{ tasks.name }}
+        {{ task.name }}
       </li>
     </ul>
   </div>
@@ -17,7 +17,7 @@
 export default {
   data: () => ({
     tasks: [
-      { name: 'Fazer o curso', isDone: False}
+      { name: 'Fazer o curso', isDone: false}
     ]
   })
 }
